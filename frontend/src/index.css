@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#0A0A0A] dark:text-gray-100 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Light mode subtle gradient background */
+  body {
+    background-image: radial-gradient(ellipse at 50% 0%, rgba(14, 165, 233, 0.05), transparent 70%),
+      radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.05), transparent 50%);
+    background-attachment: fixed;
+  }
+
+  /* Dark‑mode gradient */
+  .dark body {
+    background-image: radial-gradient(ellipse at 50% 0%, rgba(0, 35, 100, 0.25), transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(100, 0, 200, 0.15), transparent 50%);
+  }
+
+  .glass {
+    @apply backdrop-blur-xl border border-white/60 dark:border-white/10 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_0_15px_rgba(0,0,0,0.3)];
+    background-color: rgba(255, 255, 255, 0.85); /* light mode */
+  }
+
+  .dark .glass {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-hover {
+    @apply hover:bg-white/95 dark:hover:bg-white/5 transition-colors;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500 bg-clip-text text-transparent;
+  }
+}

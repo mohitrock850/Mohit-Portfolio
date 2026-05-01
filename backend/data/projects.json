@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Autonomous Enterprise Researcher – Multi-Agent Compliance Auditor",
+    "description": "Engineered an enterprise-grade multi-agent system using CrewAI to fully automate legal compliance auditing, coordinating specialized agents for ingestion, risk detection, and structured report generation.",
+    "detailedDescription": "Implemented Hybrid RAG (FAISS + BM25) for high-precision contract analysis and deployed as an interactive Streamlit app for end-to-end document intelligence.",
+    "stack": ["Python", "CrewAI", "LLMs", "FAISS", "BM25", "Hybrid RAG", "PDF/CSV Ingestion", "Streamlit"],
+    "githubUrl": "https://github.com/mohitrock850/Autonomous-Enterprise-Researcher",
+    "demoUrl": "https://autonomous-enterprise-researcher.streamlit.app/",
+    "image": "/screenshots/autonomous_enterprise.png",
+    "category": "AI & Agents",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "title": "Echo – Autonomous Voice Assistant",
+    "description": "Developed an autonomous voice-activated AI agent with wake word detection that reasons and executes system-level tasks via structured LLM tool-calling.",
+    "detailedDescription": "Integrated STT/TTS engines with a custom graph-based LLM execution engine to securely interact with file systems, GitHub, task scheduler, and external APIs.",
+    "stack": ["Python", "LLM Tool Calling", "STT/TTS Engines", "Wake Word Detection", "Graph-based Execution"],
+    "githubUrl": "https://github.com/mohitrock850/Echo",
+    "demoUrl": null,
+    "image": "/screenshots/image.png",
+    "category": "AI & Agents",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "title": "Rule Intelligence – Visual DAG Workflow Automation Platform",
+    "description": "Built a full-stack DAG-driven workflow automation platform with a scalable Node.js execution engine handling conditional logic, database operations, and external webhooks in real time.",
+    "detailedDescription": "Designed a responsive React drag-and-drop interface with WebSocket-powered live execution tracking and real-time node status updates.",
+    "stack": ["Node.js", "Express.js", "React", "MongoDB", "WebSockets", "Tailwind CSS"],
+    "githubUrl": "https://github.com/mohitrock850/Rule_Intelligence",
+    "demoUrl": "https://poetic-croissant-bc6fdb.netlify.app/",
+    "image": "/screenshots/rule_intelligence.png",
+    "category": "Automation",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "title": "StockBuddy – AI-Powered Financial Analytics Platform",
+    "description": "Created a financial analytics platform combining real-time market data (Yahoo Finance API) with LLM-driven investment summaries, risk assessments, and fundamental analysis.",
+    "detailedDescription": "Designed a Next.js frontend with FastAPI backend to synthesize live stock metrics, news feeds, and quantitative financial scripting for retail investor decision-making.",
+    "stack": ["Next.js", "React", "FastAPI", "Python", "LLMs", "Yahoo Finance API", "TradingView Pine Script v5"],
+    "githubUrl": "https://github.com/mohitrock850/StockBuddy",
+    "demoUrl": null,
+    "image": "/screenshots/stockbuddy.png",
+    "category": "Full-Stack",
+    "featured": true,
+    "order": 4
+  },
+  {
+    "title": "Maison Aurelle – Full-Stack Luxury E-Commerce Platform",
+    "description": "Developed a complete MERN e-commerce storefront with JWT-based role-based access control, shopping cart, checkout flow, inventory management, user reviews, and a full admin dashboard.",
+    "detailedDescription": "Deployed on Vercel with an optimized build pipeline delivering fast page loads and a fully mobile-responsive UI using Tailwind CSS.",
+    "stack": ["MongoDB", "Express.js", "React", "Node.js (MERN Stack)", "Tailwind CSS", "JWT Auth", "REST API"],
+    "githubUrl": "https://github.com/mohitrock850/Maison-Aurelle",
+    "demoUrl": "https://maison-aurelle.vercel.app/",
+    "image": "/screenshots/maison_aurelle.png",
+    "category": "Full-Stack",
+    "featured": true,
+    "order": 5
+  },
+  {
+    "title": "UrbanPlan AI",
+    "description": "AI-driven system assisting with urban planning and development strategies, utilizing advanced agentic workflows to analyze spatial and demographic insights.",
+    "stack": ["Python", "LangChain", "LangGraph", "LLMs"],
+    "githubUrl": "https://github.com/mohitrock850/Urban-AI-",
+    "demoUrl": null,
+    "image": "/screenshots/Urban_AI.png",
+    "category": "AI & Agents",
+    "featured": false,
+    "order": 6
+  },
+  {
+    "title": "X-RAG",
+    "description": "Advanced Retrieval-Augmented Generation (RAG) system focused on optimized document retrieval and high-accuracy context injection for Large Language Models.",
+    "stack": ["Python", "Vector Databases (FAISS/ChromaDB)", "LangChain", "LLMs"],
+    "githubUrl": "https://github.com/mohitrock850/X-RAG-Explainable-Hybrid-Retrieval-Augmented-Generation-with-Knowledge-Graphs",
+    "demoUrl": null,
+    "image": "/screenshots/X_RAG.png",
+    "category": "AI & Agents",
+    "featured": false,
+    "order": 7
+  },
+  {
+    "title": "Hospital Management System",
+    "description": "CRUD application managing patient records, doctor scheduling, and hospital administrative workflows.",
+    "stack": ["Full-stack development", "Database Management", "User Authentication"],
+    "githubUrl": "https://github.com/mohitrock850/Hospital-Management-System",
+    "demoUrl": null,
+    "image": "/screenshots/hospital_management.png",
+    "category": "Full-Stack",
+    "featured": false,
+    "order": 8
+  },
+  {
+    "title": "Smart Mail Agent",
+    "description": "Autonomous AI agent capable of intelligent email processing, semantic understanding, and automated contextual responses.",
+    "stack": ["Python", "LLMs", "LangChain", "Email APIs"],
+    "githubUrl": "https://github.com/mohitrock850/SmartMail_Agent-",
+    "demoUrl": null,
+    "image": "/screenshots/smart_mail.png",
+    "category": "AI & Agents",
+    "featured": false,
+    "order": 9
+  },
+  {
+    "title": "Autonomous-Compliance-Auditor",
+    "description": "Automated tool designed to review, parse, and analyze compliance and regulatory documents using state-of-the-art multi-agent workflows.",
+    "stack": ["Python", "CrewAI", "LLMs", "Document Intelligence"],
+    "githubUrl": "https://github.com/mohitrock850/Autonomous-Compliance-Auditor",
+    "demoUrl": null,
+    "image": "/screenshots/autonomous_compliance.png",
+    "category": "Automation",
+    "featured": false,
+    "order": 10
+  },
+  {
+    "title": "LoRA-multi-adapter-system",
+    "description": "Efficient fine-tuning architecture implementing Low-Rank Adaptation (LoRA) for dynamic loading of multiple task-specific model adapters.",
+    "stack": ["Python", "PyTorch", "Hugging Face", "PEFT", "LoRA"],
+    "githubUrl": "https://github.com/mohitrock850/LoRA-multi-adapter-system",
+    "demoUrl": null,
+    "image": "/screenshots/LORA_multi.png",
+    "category": "Machine Learning",
+    "featured": false,
+    "order": 11
+  }
+]
