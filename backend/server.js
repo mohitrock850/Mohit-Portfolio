@@ -21,7 +21,10 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://mohit-portfolio-five-delta.vercel.app', // Your exact Vercel URL
+    credentials: true // This allows cookies/tokens to pass between Vercel and Render
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 
