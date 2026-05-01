@@ -15,6 +15,12 @@ const Hero = () => {
       .catch(() => setHasResume(false));
   }, []);
 
+  const scrollToProjects = (e) => {
+    e.preventDefault();
+    const el = document.getElementById('featured-projects');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
   <section id="home" className="relative min-h-screen flex items-center justify-center px-4">
     {/* Particle-like background gradient mesh */}
@@ -78,7 +84,8 @@ const Hero = () => {
         className="mt-8 flex flex-wrap justify-center gap-4"
       >
         <a
-          href="#projects"
+          href="#featured-projects"
+          onClick={scrollToProjects}
           className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-full font-medium shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-all"
         >
           View My Work

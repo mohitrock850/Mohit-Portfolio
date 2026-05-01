@@ -5,11 +5,11 @@ import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { name: 'about', path: '/#about' },
-  { name: 'experience', path: '/#experience' },
-  { name: 'projects', path: '/#featured-projects' },
-  { name: 'skills', path: '/#skills' },
-  { name: 'contact', path: '/#contact' }
+  { name: 'about', id: 'about' },
+  { name: 'experience', id: 'experience' },
+  { name: 'projects', id: 'featured-projects' },
+  { name: 'skills', id: 'skills' },
+  { name: 'contact', id: 'contact' }
 ];
 
 const Navbar = () => {
@@ -22,6 +22,18 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    // Small delay lets the mobile menu finish closing before scrolling
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 80);
+  };
 
   return (
     <motion.nav
@@ -41,7 +53,12 @@ const Navbar = () => {
           {/* Desktop links */}
           <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map(item => (
-              <a key={item.name} href={item.path} className="capitalize text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+              <a
+                key={item.name}
+                href={`#${item.id}`}
+                onClick={(e) => scrollToSection(e, item.id)}
+                className="capitalize text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+              >
                 {item.name}
               </a>
             ))}
@@ -68,7 +85,12 @@ const Navbar = () => {
             className="md:hidden bg-white/95 dark:bg-surface/95 backdrop-blur-xl border-t border-gray-200 dark:border-white/5">
             <div className="px-4 py-4 space-y-3">
               {navLinks.map(item => (
-                <a key={item.name} href={item.path} onClick={() => setMobileOpen(false)} className="block capitalize text-gray-700 dark:text-gray-300 font-medium">
+                <a
+                  key={item.name}
+                  href={`#${item.id}`}
+                  onClick={(e) => scrollToSection(e, item.id)}
+                  className="block capitalize text-gray-700 dark:text-gray-300 font-medium py-2 active:text-primary-500"
+                >
                   {item.name}
                 </a>
               ))}

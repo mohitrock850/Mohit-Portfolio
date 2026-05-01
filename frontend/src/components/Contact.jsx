@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Loader2, Send, CheckCircle } from 'lucide-react';
+import { Loader2, Send, CheckCircle, Phone, Mail } from 'lucide-react';
 import api from '../api/api';
 import AnimatedSection from './AnimatedSection';
 
@@ -28,11 +28,29 @@ const Contact = () => {
   };
 
   return (
-    /* ADDED <section> WRAPPER HERE */
     <section id="contact">
       <AnimatedSection className="py-20 px-4 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">Get in Touch</h2>
-        <p className="text-center text-gray-500 dark:text-gray-400 mb-8">Let's build something together.</p>
+        <p className="text-center text-gray-500 dark:text-gray-400 mb-6">Let's build something together.</p>
+
+        {/* Contact info */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <a
+            href="tel:+919284585304"
+            className="flex items-center gap-2 glass px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+          >
+            <Phone size={15} />
+            +91 92845 85304
+          </a>
+          <a
+            href="mailto:mohitttherockers@gmail.com"
+            className="flex items-center gap-2 glass px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+          >
+            <Mail size={15} />
+            mohitttherockers@gmail.com
+          </a>
+        </div>
+
         <motion.form
           ref={formRef}
           onSubmit={handleSubmit}
