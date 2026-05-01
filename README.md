@@ -131,7 +131,7 @@ EMAIL_PORT=587
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-gmail-app-password
 
-ADMIN_EMAIL=admin@example.com
+ADMIN_EMAIL=admin
 ADMIN_PASSWORD=admin
 ```
 
