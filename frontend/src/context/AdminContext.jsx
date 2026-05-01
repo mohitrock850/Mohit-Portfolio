@@ -7,7 +7,7 @@ export const AdminProvider = ({ children }) => {
   const [admin, setAdmin] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem('adminToken');
+    const token = sessionStorage.getItem('adminToken');
     if (token) {
       setAuthToken(token);
       setAdmin({ token }); // simple – real verify could decode JWT
@@ -15,13 +15,13 @@ export const AdminProvider = ({ children }) => {
   }, []);
 
   const login = (token) => {
-    localStorage.setItem('adminToken', token);
+    sessionStorage.setItem('adminToken', token);
     setAuthToken(token);
     setAdmin({ token });
   };
 
   const logout = () => {
-    localStorage.removeItem('adminToken');
+    sessionStorage.removeItem('adminToken');
     setAuthToken(null);
     setAdmin(null);
   };

@@ -13,23 +13,27 @@ const facts = [
 ];
 
 const About = () => (
-  <AnimatedSection id="about" className="py-20 px-4 max-w-6xl mx-auto">
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-      About Me
-    </h2>
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-      {facts.map((item, i) => {
-        const Icon = item.icon;
-        return (
-          <GlassCard key={i} className="flex flex-col items-center text-center p-6">
-            <Icon className={`${item.color} w-8 h-8 mb-3`} />
-            <span className="text-sm text-gray-500 dark:text-gray-400 mb-1">{item.label}</span>
-            <span className="text-lg font-semibold text-gray-900 dark:text-white">{item.value}</span>
-          </GlassCard>
-        );
-      })}
-    </div>
-  </AnimatedSection>
+  // 1. Add a native <section> wrapper with the ID here
+  <section id="about">
+    {/* 2. Remove the ID from AnimatedSection */}
+    <AnimatedSection className="py-20 px-4 max-w-6xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+        About Me
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        {facts.map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <GlassCard key={i} className="flex flex-col items-center text-center p-6">
+              <Icon className={`${item.color} w-8 h-8 mb-3`} />
+              <span className="text-sm text-gray-500 dark:text-gray-400 mb-1">{item.label}</span>
+              <span className="text-lg font-semibold text-gray-900 dark:text-white">{item.value}</span>
+            </GlassCard>
+          );
+        })}
+      </div>
+    </AnimatedSection>
+  </section>
 );
 
 export default About;
