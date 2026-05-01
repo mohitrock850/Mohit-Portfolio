@@ -132,7 +132,7 @@ EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-gmail-app-password
 
 ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=admin123
+ADMIN_PASSWORD=admin
 ```
 
 > **Important:** `CLOUDINARY_CLOUD_NAME` must be the cloud name shown in your [Cloudinary Dashboard](https://cloudinary.com/console) (e.g., `dxy1abc2`), **not** a custom label like "Root".

@@ -1,4 +1,9 @@
-require('dotenv').config();
+// Load env vars only in development. 
+// Render injects its own environment variables in production.
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -8,6 +13,7 @@ const errorHandler = require('./middleware/errorHandler');
 // ── Startup env validation ──────────────────────────────────────────────────
 const REQUIRED_ENV = ['MONGO_URI', 'JWT_SECRET', 'CLOUDINARY_CLOUD_NAME', 'CLOUDINARY_API_KEY', 'CLOUDINARY_API_SECRET'];
 const PLACEHOLDER_VALUES = ['your_cloud_name_from_cloudinary_dashboard', 'your_jwt_secret_change_this'];
+
 REQUIRED_ENV.forEach((key) => {
   const val = process.env[key];
   if (!val || PLACEHOLDER_VALUES.includes(val)) {
@@ -21,10 +27,19 @@ connectDB();
 const app = express();
 
 // Middleware
+// Allow requests from local dev environments AND your production Vercel app
+const allowedOrigins = [
+  'http://localhost:5173',                           // Vite default local port
+  'http://localhost:3000',                           // React default local port
+  'https://mohit-portfolio-five-delta.vercel.app',   // Production URL
+  process.env.CLIENT_URL                             // Fallback for any custom env variable
+].filter(Boolean); // Removes undefined values if CLIENT_URL isn't set
+
 app.use(cors({
-    origin: 'https://mohit-portfolio-five-delta.vercel.app', // Your exact Vercel URL
-    credentials: true // This allows cookies/tokens to pass between Vercel and Render
+  origin: allowedOrigins,
+  credentials: true // This allows cookies/tokens to pass between frontend and backend
 }));
+
 app.use(express.json());
 app.use(morgan('dev'));
 
